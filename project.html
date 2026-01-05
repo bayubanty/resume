@@ -3,59 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Bayo Awoh</title>
+    <title>My Projects | Bayo Augustine Awoh</title>
+    <style>
+        /* Basic Reset & Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .site-title {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background-color: #e5e7eb;
+        }
+        nav a.active {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* Page Content */
+        .page-title {
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        .page-subtitle {
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        /* Project Card Styling */
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .project-header h2 {
+            color: #1e40af;
+        }
+        .project-role {
+            background-color: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .project-content {
+            display: grid;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .project-content {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        /* Project Details */
+        .project-details h3,
+        .project-tech h4,
+        .project-outcomes h4 {
+            color: #374151;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .project-details ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-details li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tech Tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .tech-tag {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+
+        /* Outcome Grid */
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+        .outcome-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f0f9ff;
+            border-radius: 6px;
+        }
+        .outcome-item i {
+            font-size: 1.5rem;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Project Links */
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: white;
+            color: #4b5563;
+            border: 1px solid #d1d5db;
+        }
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        /* Other Projects Section */
+        .other-projects {
+            margin-top: 3rem;
+        }
+        .other-projects h2 {
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .mini-project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.25rem;
+            border: 1px solid #e5e7eb;
+            height: 100%;
+        }
+        .mini-project-card h3 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .mini-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        .mini-tech span {
+            background-color: #f3f4f6;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #4b5563;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+    </style>
+    <!-- Link to Font Awesome for icons (using CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header class="main-header">
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="index.html">BA</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#education">Education</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="index.html#contact" class="btn-contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
+    <header>
+        <h1 class="site-title">Bayo Augustine Awoh</h1>
+        <nav>
+            <a href="index.html">Home / Resume</a>
+            <a href="projects.html" class="active">Projects</a>
         </nav>
     </header>
 
-    <main class="container">
+    <main>
         <section class="projects-hero">
-            <h1>My Projects</h1>
-            <p>Practical applications of technical skills and problem-solving abilities</p>
+            <h1 class="page-title">My Projects</h1>
+            <p class="page-subtitle">Practical applications of technical skills and problem-solving abilities</p>
         </section>
 
         <section class="projects-grid">
-            <article class="project-card featured">
+            <!-- Main Featured Project -->
+            <article class="project-card">
                 <div class="project-header">
                     <h2>Georgia Watch Accountability Scorecard</h2>
                     <span class="project-role">Lead Developer</span>
                 </div>
-                
+
                 <div class="project-content">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Dashboard interface design" width="800" height="450">
-                    </div>
-                    
                     <div class="project-details">
                         <h3><i class="fas fa-tasks"></i> Key Responsibilities</h3>
                         <ul>
-                            <li>Designed UI/UX mockups using Figma for the project's web application</li>
-                            <li>Developed front-end and backend using JavaScript, HTML, and CSS</li>
-                            <li>Implemented dynamic user experience features and data visualization</li>
-                            <li>Ensured cross-browser compatibility and responsive design</li>
+                            <li>Designed UI/UX mockups using Figma for the project's web application.</li>
+                            <li>Developed front-end and backend using JavaScript, HTML, and CSS.</li>
+                            <li>Implemented dynamic user experience features and data visualization.</li>
+                            <li>Ensured cross-browser compatibility and responsive design.</li>
                         </ul>
-                        
+
                         <div class="project-tech">
                             <h4><i class="fas fa-code"></i> Technologies Used</h4>
                             <div class="tech-tags">
@@ -67,17 +286,17 @@
                                 <span class="tech-tag">UI/UX Design</span>
                             </div>
                         </div>
-                        
+
                         <div class="project-outcomes">
-                            <h4><i class="fas fa-chart-line"></i> Outcomes</h4>
+                            <h4><i class="fas fa-chart-line"></i> Key Outcomes</h4>
                             <div class="outcome-grid">
                                 <div class="outcome-item">
                                     <i class="fas fa-palette"></i>
-                                    <p>Modern, intuitive interface design</p>
+                                    <p>Modern, intuitive interface</p>
                                 </div>
                                 <div class="outcome-item">
                                     <i class="fas fa-mobile-alt"></i>
-                                    <p>Fully responsive web application</p>
+                                    <p>Fully responsive application</p>
                                 </div>
                                 <div class="outcome-item">
                                     <i class="fas fa-bolt"></i>
@@ -87,44 +306,47 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-links">
+                    <!-- Replace # with your actual links later -->
                     <a href="#" class="btn btn-primary">
-                        <i class="fas fa-external-link-alt"></i> Live Demo
+                        <i class="fas fa-external-link-alt"></i> View Live Demo
                     </a>
                     <a href="#" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> View Code
+                        <i class="fab fa-github"></i> View Source Code
                     </a>
                 </div>
             </article>
 
+            <!-- Other Projects Section -->
             <div class="other-projects">
                 <h2>Other Technical Projects</h2>
-                
                 <div class="project-cards">
                     <article class="mini-project-card">
                         <h3>Network Security Dashboard</h3>
-                        <p>Real-time monitoring tool for network security metrics</p>
+                        <p>Real-time monitoring tool for network security metrics and threat detection.</p>
                         <div class="mini-tech">
                             <span>Python</span>
                             <span>Flask</span>
                             <span>SQLite</span>
+                            <span>Chart.js</span>
                         </div>
                     </article>
-                    
+
                     <article class="mini-project-card">
-                        <h3>IT Inventory Management</h3>
-                        <p>Web-based system for tracking IT assets and maintenance</p>
+                        <h3>IT Inventory Management System</h3>
+                        <p>Web-based system for tracking IT assets, maintenance schedules, and software licenses.</p>
                         <div class="mini-tech">
                             <span>Java</span>
                             <span>Spring Boot</span>
                             <span>MySQL</span>
+                            <span>React</span>
                         </div>
                     </article>
-                    
+
                     <article class="mini-project-card">
                         <h3>Automated QA Testing Tool</h3>
-                        <p>Scripts for automated testing of payment terminal software</p>
+                        <p>Scripts for automated testing of payment terminal software to improve deployment reliability.</p>
                         <div class="mini-tech">
                             <span>Python</span>
                             <span>Selenium</span>
@@ -136,17 +358,14 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Bayo Augustine Awoh. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/bayo-awoh" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/bawoh" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:bayo.awoh@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Bayo Augustine Awoh. All rights reserved.</p>
+        <p>IT Support Specialist & Team Lead</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Simple script to update the copyright year -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
