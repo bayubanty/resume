@@ -54,3 +54,12 @@ footer {
   padding: 1rem;
 }
 
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+
