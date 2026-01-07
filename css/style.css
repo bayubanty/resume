@@ -630,3 +630,19 @@ a:hover {
     border-radius: 20px;
     font-size: 0.8rem;
 }
+/* Project section */
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
