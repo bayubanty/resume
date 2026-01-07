@@ -1,26 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects | Bayo Augustine Awoh</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Bayo Awoh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body style="font-family: Arial, sans-serif; padding: 40px;">
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">BA</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html#contact" class="btn-contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
 
-<h1>Projects</h1>
-<p>If you can see this text, the page is working.</p>
+    <main class="container">
+        <section class="projects-hero">
+            <h1>My Projects</h1>
+            <p>Practical applications of technical skills and problem-solving abilities</p>
+        </section>
 
-<hr>
+        <section class="projects-grid">
+            <article class="project-card featured">
+                <div class="project-header">
+                    <h2>Georgia Watch Accountability Scorecard</h2>
+                    <span class="project-role">Lead Developer</span>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Dashboard interface design" width="800" height="450">
+                    </div>
+                    
+                    <div class="project-details">
+                        <h3><i class="fas fa-tasks"></i> Key Responsibilities</h3>
+                        <ul>
+                            <li>Designed UI/UX mockups using Figma for the project's web application</li>
+                            <li>Developed front-end and backend using JavaScript, HTML, and CSS</li>
+                            <li>Implemented dynamic user experience features and data visualization</li>
+                            <li>Ensured cross-browser compatibility and responsive design</li>
+                        </ul>
+                        
+                        <div class="project-tech">
+                            <h4><i class="fas fa-code"></i> Technologies Used</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Responsive Design</span>
+                                <span class="tech-tag">UI/UX Design</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-outcomes">
+                            <h4><i class="fas fa-chart-line"></i> Outcomes</h4>
+                            <div class="outcome-grid">
+                                <div class="outcome-item">
+                                    <i class="fas fa-palette"></i>
+                                    <p>Modern, intuitive interface design</p>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <p>Fully responsive web application</p>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <p>Improved data accessibility</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </article>
 
-<h2>Georgia Watch Accountability Scorecard</h2>
-<p><strong>Role:</strong> Lead Developer</p>
-<ul>
-  <li>Designed UI/UX mockups using Figma</li>
-  <li>Developed frontend and backend using HTML, CSS, and JavaScript</li>
-  <li>Built an interactive accountability scorecard</li>
-</ul>
+            <div class="other-projects">
+                <h2>Other Technical Projects</h2>
+                
+                <div class="project-cards">
+                    <article class="mini-project-card">
+                        <h3>Network Security Dashboard</h3>
+                        <p>Real-time monitoring tool for network security metrics</p>
+                        <div class="mini-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>SQLite</span>
+                        </div>
+                    </article>
+                    
+                    <article class="mini-project-card">
+                        <h3>IT Inventory Management</h3>
+                        <p>Web-based system for tracking IT assets and maintenance</p>
+                        <div class="mini-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>MySQL</span>
+                        </div>
+                    </article>
+                    
+                    <article class="mini-project-card">
+                        <h3>Automated QA Testing Tool</h3>
+                        <p>Scripts for automated testing of payment terminal software</p>
+                        <div class="mini-tech">
+                            <span>Python</span>
+                            <span>Selenium</span>
+                            <span>PyTest</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<p><a href="index.html">← Back to Home</a></p>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Bayo Augustine Awoh. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/bayo-awoh" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/bawoh" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:bayo.awoh@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
